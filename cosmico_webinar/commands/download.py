@@ -306,7 +306,7 @@ def cli(
             finally:
                 generic_progress.update(task_id, advance=1)
         generic_progress.update(
-            task_id, description=f"Found {len(urls)} VODs.", completed=len(events), total=len(events)
+            task_id, description=f"Found {len(vod_download_data)} VODs.", completed=len(events), total=len(events)
         )
         generic_progress.stop_task(task_id)
         current_step += 1
