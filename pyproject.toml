@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "cosmico-webinar"
+version = "0.1.0"
+description = "Get all the StreamYard links for Cosmico's webinars"
+authors = ["Giacomo Ferretti <giacomo.ferretti.00@gmail.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+repository = "https://github.com/giacomoferretti/cosmico-webinar"
+packages = [{ include = "cosmico_webinar" }]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/giacomoferretti/cosmico-webinar/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+requests = "^2.32.3"
+inquirer = "^3.4.0"
+python-slugify = "^8.0.4"
+rich = "^13.9.4"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.2"
+
+[tool.poetry.scripts]
+cosmico-webinar = "cosmico_webinar.__main__:cli"
+
+[tool.ruff]
+line-length = 120
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=cosmico_webinar --cov-report html"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
