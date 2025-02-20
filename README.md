@@ -24,4 +24,4 @@ Commands:
 
 > NOTE: Your email address, first name and last name are used to register to the webinar, if necessary.
 
-`cosmico-webinar -p 127.0.0.1:8080 download --email YOUR_EMAIL_ADDRESS --first-name YOUR_NAME --last-name YOUR_LAST_NAME`
+`cosmico-webinar download --email YOUR_EMAIL_ADDRESS --first-name YOUR_NAME --last-name YOUR_LAST_NAME`
